@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cors-proxy
+  labels:
+    app: cors-proxy
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: cors-proxy
+  template:
+    metadata:
+      labels:
+        app: cors-proxy
+    spec:
+      containers:
+        - name: cors-proxy
+          image: 975050082086.dkr.ecr.us-east-1.amazonaws.com/demo/cors-proxy:latest
+          ports:
+            - containerPort: 8082
+          resources:
+            requests:
+              cpu: "50m"      # Requests 50m CPU to allow more room on the node
+            limits:
+              cpu: "100m"     # Limits the CPU usage to 100m to prevent overuse

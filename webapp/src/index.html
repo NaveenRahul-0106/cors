@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CORS Proxy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        button {
+            margin: 10px 0;
+            padding: 10px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 15px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>CORS Proxy Demo</h1>
+
+    <button id="no-cors">Fetch Without CORS Proxy</button>
+    <button id="with-cors">Fetch With CORS Proxy</button>
+
+    <pre id="output"></pre>
+
+    <!-- Webpack will inject the bundle.js script here -->
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proxy Server Status</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #34495e;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #16a085;
+            font-size: 1.2em;
+            background-color: #ecf0f1;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .url {
+            display: block;
+            word-wrap: break-word;
+            color: #2980b9;
+            text-decoration: none;
+        }
+
+        .url:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Proxy Server is Running</h1>
+        <h2>Application needs to send requests in the following format:</h2>
+        <h3><a class="url" href="http://localhost:8082/proxy?url=http://www.google.com/robots.txt">http://localhost:8082/proxy?url=http://www.google.com/robots.txt</a></h3>
+    </div>
+</body>
+</html>

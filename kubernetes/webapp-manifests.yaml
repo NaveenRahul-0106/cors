@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp
+  labels:
+    app: webapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webapp
+  template:
+    metadata:
+      labels:
+        app: webapp
+    spec:
+      containers:
+        - name: webapp
+          image: 975050082086.dkr.ecr.us-east-1.amazonaws.com/demo/webapp:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: PROXY_URL
+              value: "http://a2a1bc1d2cf554f41b12348a74a3a60e-1243460673.us-east-1.elb.amazonaws.com"
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: webapp-svc
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 8080
+  selector:
+    app: webapp
+
+

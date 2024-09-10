@@ -1,0 +1,9 @@
+IAC/.terraformIAC
+IAC/.*
+IAC/terraform.tfstate
+IAC/terraform.tfstate.backup
+server/node_modules
+webapp/dist
+webapp/node_modules
+
+
